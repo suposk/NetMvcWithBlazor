@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+
+    bool IsBlazorEnabled = ViewData["IsBlazorEnabled"] != null && (bool)ViewData["IsBlazorEnabled"];
+}
+
+<h4>MudBlazor Sample</h4>
+
+@if (IsBlazorEnabled)
+{
+    <p>MudBlazor</p>
+}
+else
+{
+    <div class="alert alert-warning" role="alert">
+        Blazor is not enabled. Please ensure that the Blazor services are configured in Startup.cs or Program.cs.
+    </div>
+}
+
+
