@@ -6,11 +6,20 @@ namespace NetMvcWithBlazor.Controllers
 {
     public class BlazorController : Controller
     {
+        private readonly IConfiguration _configuration;
         private readonly ILogger<BlazorController> _logger;
 
-        public BlazorController(ILogger<BlazorController> logger)
+        [ViewData]
+        public bool IsBlazorEnabled { get; init; }
+
+        public BlazorController(
+            IConfiguration configuration,
+            ILogger<BlazorController> logger
+            )
         {
+            _configuration = configuration;
             _logger = logger;
+            IsBlazorEnabled = _configuration.GetValue<bool>("IsBlazorEnabled");
         }
 
         public IActionResult Index()
