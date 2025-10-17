@@ -1,5 +1,8 @@
-﻿
+﻿@using MudBlazor
+@using MudBlazor.Components
+
 @{
+
     ViewData["Title"] = "Index";
 
     bool IsBlazorEnabled = ViewData["IsBlazorEnabled"] != null && (bool)ViewData["IsBlazorEnabled"];
@@ -10,6 +13,10 @@
 @if (IsBlazorEnabled)
 {
     <p>MudBlazor</p>
+
+    <component type="typeof(NetMvcWithBlazor.Views.Shared.Component.MudCounter)" render-mode="ServerPrerendered" />
+ @*    @(await Html.RenderComponentAsync<NetMvcWithBlazor.Views.Shared.Component.MudCounter>(RenderMode.ServerPrerendered))
+ *@
 }
 else
 {

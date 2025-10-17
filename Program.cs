@@ -1,3 +1,5 @@
+using MudBlazor.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,6 +11,7 @@ bool IsBlazorEnabled = configuration.GetValue<bool>("IsBlazorEnabled");
 if (IsBlazorEnabled)
 {
     builder.Services.AddServerSideBlazor();
+    builder.Services.AddMudServices();
 }
 
 var app = builder.Build();
