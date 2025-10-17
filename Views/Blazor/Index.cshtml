@@ -11,6 +11,7 @@
 {
     <p>This is a Blazor component rendered inside an MVC view:</p>
     @* <component type="typeof(NetMvcWithBlazor.Components.Counter)" render-mode="ServerPrerendered" /> *@
+    @(await Html.RenderComponentAsync<NetMvcWithBlazor.Views.Shared.Component.Component>(RenderMode.ServerPrerendered, new { Data = " Hello World " }))
 }
 else
 {

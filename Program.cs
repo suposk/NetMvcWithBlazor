@@ -3,6 +3,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+//get IConfiguration instance from builder
+IConfiguration configuration = builder.Configuration;
+bool IsBlazorEnabled = configuration.GetValue<bool>("IsBlazorEnabled");
+if (IsBlazorEnabled)
+{
+    builder.Services.AddServerSideBlazor();
+}
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -19,6 +27,11 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+if (IsBlazorEnabled)
+{
+    app.MapBlazorHub();
+}
 
 app.MapControllerRoute(
     name: "default",
