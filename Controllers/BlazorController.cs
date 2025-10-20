@@ -27,7 +27,7 @@ namespace NetMvcWithBlazor.Controllers
             return View();
         }
 
-        public IActionResult MudBlazor()
+        public IActionResult MyMud()
         {
             return View();
         }
