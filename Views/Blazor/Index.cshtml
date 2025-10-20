@@ -11,7 +11,7 @@
 
 @if (IsBlazorEnabled)
 {    
-    @* <component type="typeof(NetMvcWithBlazor.Views.Shared.Component.Component)" render-mode="ServerPrerendered" /> *@
+    @* <component type="typeof(NetMvcWithBlazor.Views.Shared.Component.NormalCounter)" render-mode="ServerPrerendered" /> *@
     @(await Html.RenderComponentAsync<NetMvcWithBlazor.Views.Shared.Component.NormalCounter>(RenderMode.ServerPrerendered, new { Data = " Hello World " }))
 }
 else
