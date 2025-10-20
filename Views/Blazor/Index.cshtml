@@ -10,8 +10,8 @@
 <h4>Blazor Sample</h4>
 
 @if (IsBlazorEnabled)
-{
-    @* <component type="typeof(NetMvcWithBlazor.Components.Counter)" render-mode="ServerPrerendered" /> *@
+{    
+    @* <component type="typeof(NetMvcWithBlazor.Views.Shared.Component.Component)" render-mode="ServerPrerendered" /> *@
     @(await Html.RenderComponentAsync<NetMvcWithBlazor.Views.Shared.Component.Component>(RenderMode.ServerPrerendered, new { Data = " Hello World " }))
 }
 else

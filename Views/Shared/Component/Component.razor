@@ -4,6 +4,19 @@
 <br />
 <div>Param @Data </div>
 <div>Button clicked @Counter times.</div>
+
+<br />
+<br />
+<MudText Typo="Typo.h6">
+    MudBlazor is @Text
+</MudText>
+
+<MudButton Variant="Variant.Filled"
+           Color="Color.Primary"
+           OnClick="ButtonOnClick">
+    @ButtonText
+</MudButton>
+
 @code {
     [Parameter]
     public string Data { get; set; } = string.Empty;
@@ -15,4 +28,16 @@
         Data = "Button Clicked";
         Counter++;
     }
- }   
+
+    string Text { get; set; } = "Some text ????";
+    string ButtonText { get; set; } = "Click Me";
+    int ClickCount { get; set; }
+
+    void ButtonOnClick()
+    {
+        ClickCount += 1;
+        Text = $"Awesome x {ClickCount}";
+        ButtonText = "Click Me Again";
+    }
+
+}
