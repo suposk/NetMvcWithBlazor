@@ -24,7 +24,7 @@ namespace NetMvcWithBlazor.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(); //must be Index always for blazor
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

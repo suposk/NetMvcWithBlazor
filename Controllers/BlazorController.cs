@@ -27,9 +27,9 @@ namespace NetMvcWithBlazor.Controllers
             return View();
         }
 
-        public IActionResult MyMud()
+        public IActionResult NotWorking()
         {
-            return View();
+            return View(); //does not work, must be Index always for blazor
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
