@@ -1,4 +1,4 @@
-using MudBlazor.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +12,7 @@ if (IsBlazorEnabled)
 {
     builder.Services.AddServerSideBlazor();
     builder.Services.AddMudServices();
+    builder.Services.AddScoped<ICustomDialogService, CustomDialogService>();
 }
 
 var app = builder.Build();

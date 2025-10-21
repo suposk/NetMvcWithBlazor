@@ -1,6 +1,6 @@
 ﻿namespace NetMvcWithBlazor.Views.Shared.Component;
 
-public class DialogTemplateBase : ComponentBase
+public class DialogTemplateBase : Microsoft.AspNetCore.Components.ComponentBase
 {
     [CascadingParameter] IMudDialogInstance MudDialog { get; set; }
 

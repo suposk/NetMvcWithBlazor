@@ -8,7 +8,7 @@ public class WindowDimension
 	public int? Height { get; init; }
 }
 
-public interface ICsroDialogService
+public interface ICustomDialogService
 {
 	Task<string> ShowDialogWithEntry(string title, string text, string okText = "Ok", string cancelText = "Cancel");
 	Task<bool> ShowDialog(string title, string text, string okText = "Ok", string cancelText = "Cancel");
@@ -18,11 +18,11 @@ public interface ICsroDialogService
 	Task<WindowDimension> GetWindowDimensions();
 }
 
-public class CsroDialogService : ICsroDialogService
+public class CustomDialogService : ICustomDialogService
 {
 	private readonly IJSRuntime _jsRuntime;
 
-	public CsroDialogService(IDialogService dialogService, IJSRuntime JsRuntime)
+	public CustomDialogService(IDialogService dialogService, IJSRuntime JsRuntime)
 	{
 		_dialogService = dialogService;
 		_jsRuntime = JsRuntime;

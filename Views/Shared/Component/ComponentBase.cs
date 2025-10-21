@@ -1,6 +1,6 @@
 ﻿namespace NetMvcWithBlazor.Views.Shared.Component;
 
-public class CsroComponentBase : ComponentBase, IDisposable
+public class ComponentBase : Microsoft.AspNetCore.Components.ComponentBase, IDisposable
 {
     [Parameter]
     public bool IsValidationEnabled { get; set; }

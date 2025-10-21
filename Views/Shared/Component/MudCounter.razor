@@ -9,9 +9,38 @@
                OnClick="ButtonOnClick">
         @ButtonText
     </MudButton>
+
+    <br />
+    <br />
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Primary"
+               OnClick="ShowMessage"
+               >               
+        Show Message
+    </MudButton>
+
+    <br />
+    <br />
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Primary"
+               OnClick="OpenDialog">
+        Open Dialog
+    </MudButton>
+
+    <br />
+    <br />
+    <MudButton Variant="Variant.Filled"
+               Color="Color.Primary"
+               OnClick="OpenDialogWithEntry">
+        Open Dialog with entry
+    </MudButton>
+
 </MudWrapperComp>
 
 @code {
+    [Inject]
+    public ICustomDialogService CustomDialogService { get; set; }
+
     string Text { get; set; } = "Some text ????";
     string ButtonText { get; set; } = "Click Me";
     int ClickCount { get; set; }
@@ -22,4 +51,23 @@
         Text = $"Awesome x {ClickCount}";
         ButtonText = "Click Me Again";
     }
+
+   async Task ShowMessage()
+   {
+       // Dialog logic here
+       await  CustomDialogService.ShowMessage("Title Dialog!", "This is some text");
+   }
+
+   async Task OpenDialog()
+   {
+       // Dialog logic here
+       var res = await CustomDialogService.ShowDialog(title: "Title Dialog!", text: "Show some text in dialog");
+   }
+
+   async Task OpenDialogWithEntry()
+   {
+       // Dialog logic here
+       var res = await CustomDialogService.ShowDialogWithEntry(title: "Title Dialog entry!", text: "Show some text in dialog");
+   }
+
 }
