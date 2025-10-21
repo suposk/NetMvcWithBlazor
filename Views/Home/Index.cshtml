@@ -3,9 +3,25 @@
 }
 
 <div class="text-center">    
-    <h3>This is example shows how to enable Blazor and MudBlazor components in MVC APP </h3>
     <br />
-    <h4>Make sure appsettings.Development.json has following -> "IsBlazorEnabled": true </h4>
+    <h5>This is example shows how to enable Blazor and MudBlazor components in MVC APP </h5>
     <br />
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h6>Make sure appsettings.Development.json has following -> "IsBlazorEnabled": true </h6>
+    <br />
+    <br />
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item fs-3 btn-primary">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Blazor" asp-action="Index">Blazor example</a>
+            </li>
+            <li class="nav-item fs-3 btn-outline-danger">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Blazor" asp-action="NotWorking">NotWorking</a>
+            </li>
+            <li class="nav-item fs-3 btn-secondary">
+                <a class="nav-link text-dark" asp-area="" asp-controller="MudBla" asp-action="Index">MudBlazor example</a>
+            </li>
+        </ul>
+    </div>
+    <br />
+    <p class="mt-20">Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
