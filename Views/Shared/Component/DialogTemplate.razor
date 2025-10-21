@@ -1,0 +1,51 @@
+﻿@inherits DialogTemplateBase
+<MudDialog>
+    <DialogContent>
+        @if (string.IsNullOrWhiteSpace(Title))
+        {
+            <MudText Typo="Typo.h6" Align="Align.Center" GutterBottom="true" Class="m-3">@Title</MudText>
+        }
+
+        @if(ShowLargeText)
+        {
+
+@*              <MudTextField 
+                  T=string 
+                  ReadOnly=true 
+                  Lines="30"
+                  Text="@ContentText"
+                  Style=@LargeTextStyle 
+                  Class="mt-3"></MudTextField>*@
+
+            <div id="unique_id_scroll_section" class="ma-0" style=@LargeTextStyle>
+                <MudPaper Elevation="0" Class="d-flex flex-column justify-space-between py-6">
+                    <MudText Class="mt-3">@ContentText</MudText>
+                    <MudScrollToTop TopOffset="100"                                
+                                Selector="#unique_id_scroll_section"
+                                VisibleCssClass="visible absolute"
+                                HiddenCssClass="invisible">
+                        <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.ArrowUpward" Color="Color">Go to top</MudButton>
+                    </MudScrollToTop>
+                </MudPaper>
+            </div>
+        }
+        else
+        {
+            <MudText Class="mt-3">@ContentText</MudText>
+        }
+
+        @if (ShowEntry)
+        {
+            <MudTextField Class="mt-6" Label="Enter text: (min 4 char)"
+                          @bind-Value="EnteredText"
+                          For="@(() => EnteredText)" />
+        }
+    </DialogContent>
+    <DialogActions>
+        @if (ShowCancel)
+        {
+            <MudButton OnClick="Cancel">@CancelText</MudButton>
+        }
+        <MudButton Color="@Color" Variant="Variant.Filled" OnClick="Submit">@ButtonText</MudButton>
+    </DialogActions>
+</MudDialog>
