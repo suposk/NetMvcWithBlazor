@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-
-namespace RazMudBla.Component;
+﻿namespace RazMudBla.Component;
 
 public class ComponentBase : Microsoft.AspNetCore.Components.ComponentBase, IDisposable
 {

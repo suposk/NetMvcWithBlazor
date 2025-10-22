@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-
-namespace RazMudBla.Component;
+﻿namespace RazMudBla.Component;
 
 public class DialogTemplateBase : Microsoft.AspNetCore.Components.ComponentBase
 {
