@@ -11,8 +11,8 @@
 
 @if (IsBlazorEnabled)
 {    
-    @* <component type="typeof(NetMvcWithBlazor.Views.Shared.Component.NormalCounter)" render-mode="ServerPrerendered" /> *@
-    @(await Html.RenderComponentAsync<NetMvcWithBlazor.Views.Shared.Component.NormalCounter>(RenderMode.ServerPrerendered, new { Data = " Hello World " }))
+    @* <component type="typeof(RazMudBla.Component.NormalCounter)" render-mode="ServerPrerendered" /> *@
+    @(await Html.RenderComponentAsync<RazMudBla.Component.NormalCounter>(RenderMode.ServerPrerendered, new { Data = " Hello World " }))
 }
 else
 {

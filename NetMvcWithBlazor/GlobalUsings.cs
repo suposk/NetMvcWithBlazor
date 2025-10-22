@@ -7,5 +7,5 @@ global using MudBlazor.Services;
 global using System.Net;
 global using System.Text;
 
-global using NetMvcWithBlazor.Views.Shared.Component;
-global using NetMvcWithBlazor.Views.Shared.Component.Services;
+global using RazMudBla.Component;
+global using RazMudBla.Services;

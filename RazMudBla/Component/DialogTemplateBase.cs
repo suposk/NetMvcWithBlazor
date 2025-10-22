@@ -1,4 +1,6 @@
-﻿namespace NetMvcWithBlazor.Views.Shared.Component;
+﻿using Microsoft.AspNetCore.Components;
+
+namespace RazMudBla.Component;
 
 public class DialogTemplateBase : Microsoft.AspNetCore.Components.ComponentBase
 {

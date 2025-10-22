@@ -1,6 +1,4 @@
-﻿using MudBlazor;
-
-namespace NetMvcWithBlazor.Views.Shared.Component.Services;
+﻿namespace RazMudBla.Services;
 
 public class WindowDimension
 {
