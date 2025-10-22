@@ -1,4 +1,4 @@
-﻿namespace RazMudBla.Component;
+﻿namespace RazMudBla.Components;
 
 public class ComponentBase : Microsoft.AspNetCore.Components.ComponentBase, IDisposable
 {
