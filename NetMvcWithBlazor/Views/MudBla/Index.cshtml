@@ -14,6 +14,9 @@
     <component type="typeof(RazMudBla.Components.MudCounter)" render-mode="ServerPrerendered" />
  @*    @(await Html.RenderComponentAsync<RazMudBla.Components.MudCounter>(RenderMode.ServerPrerendered))
  *@
+
+    @* Necessary to include the Blazor script *@
+    <script src="_framework/blazor.server.js"></script>
 }
 else
 {

@@ -13,6 +13,9 @@
 {    
     @* <component type="typeof(RazMudBla.Components.NormalCounter)" render-mode="ServerPrerendered" /> *@
     @(await Html.RenderComponentAsync<RazMudBla.Components.NormalCounter>(RenderMode.ServerPrerendered, new { Data = " Hello World " }))
+
+    @* Necessary to include the Blazor script *@
+    <script src="_framework/blazor.server.js"></script>
 }
 else
 {
