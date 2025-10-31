@@ -1,6 +1,6 @@
 ﻿namespace RazMudBla.Components;
 
-public class ComponentBase : Microsoft.AspNetCore.Components.ComponentBase, IDisposable
+public class CompBase : ComponentBase, IDisposable
 {
     [Parameter]
     public bool IsValidationEnabled { get; set; }

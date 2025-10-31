@@ -1,0 +1,31 @@
+﻿@{
+
+    ViewData["Title"] = "Importer";
+
+    bool IsBlazorEnabled = ViewData["IsBlazorEnabled"] != null && (bool)ViewData["IsBlazorEnabled"];
+}
+
+<h4>MudBlazor Sample in MVC</h4>
+
+@if (IsBlazorEnabled)
+{
+    <p>MudBlazor</p>
+
+    <component type="typeof(RazMudBla.Features.Importer.ImporterComp)" render-mode="ServerPrerendered" />
+    @*    @(await Html.RenderComponentAsync<RazMudBla.Components.MudCounter>(RenderMode.ServerPrerendered))
+ *@
+
+    @* Necessary to include the Blazor script *@
+    <script src="_framework/blazor.server.js"></script>
+    <script src="_content/MudBlazor/MudBlazor.min.js"></script>
+}
+else
+{
+    <div class="alert alert-warning" role="alert">
+        Blazor is not enabled. Please ensure that the Blazor services are configured in Startup.cs or Program.cs.
+        <br />
+        Make sure appsettings.Development.json has following -> "IsBlazorEnabled": true
+    </div>
+}
+
+
