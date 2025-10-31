@@ -7,5 +7,6 @@ global using MudBlazor.Services;
 global using System.Net;
 global using System.Text;
 
+global using RazMudBla;
 global using RazMudBla.Components;
 global using RazMudBla.Services;

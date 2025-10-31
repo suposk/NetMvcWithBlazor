@@ -12,7 +12,9 @@ if (IsBlazorEnabled)
 {
     builder.Services.AddServerSideBlazor();
     builder.Services.AddMudServices();
-    builder.Services.AddScoped<ICustomDialogService, CustomDialogService>();
+
+    //register RazMudBla services
+    builder.Services.RegisterRazMudBlaServices();
 }
 
 var app = builder.Build();

@@ -8,15 +8,20 @@ public class ImporterCompBase : CompBase
 
     public string? SampleText { get; set; }
 
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        await LoadAsync();
+    }
+
     public override async Task LoadAsync()
     {
-        SampleText = "This is a sample text for the Importer Component.";
-        await base.LoadAsync();
+        SampleText = "This is a sample text for the Importer Component.";        
         
         ShowLoading();
-        await Task.Delay(TimeSpan.FromSeconds(2)); // Simulate loading delay
+        await Task.Delay(TimeSpan.FromSeconds(1)); // Simulate loading delay
         ShowLoading("Taking longer then expected");
-        await Task.Delay(TimeSpan.FromSeconds(2)); // Simulate loading delay
+        //await Task.Delay(TimeSpan.FromSeconds(2)); // Simulate loading delay
         HideLoading();
     }
 }
