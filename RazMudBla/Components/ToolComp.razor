@@ -1,0 +1,26 @@
+﻿@inherits CompBase
+
+<MudWrapperComp>
+    <MudText Color="Color.Secondary">
+        @LoadingMessage
+    </MudText>
+
+    <MudButton OnClick="OnButtonClicked" Variant="Variant.Outlined" Color="Color.Primary">
+        @ButtonText
+    </MudButton>
+
+</MudWrapperComp>
+
+@code {
+
+    string ButtonText { get; set; } = "Click Me";
+    int ClickCount { get; set; }
+
+    public async Task OnButtonClicked()
+    {
+        // Tool method logic here
+        ClickCount += 1;        
+        ButtonText = $"{ClickCount}. Click Me Again";
+    }
+
+}
