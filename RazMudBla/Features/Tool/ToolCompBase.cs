@@ -1,4 +1,4 @@
-﻿namespace RazMudBla.Components.Features.Tool;
+﻿namespace RazMudBla.Features.Tool;
 
 public class ToolCompBase : CompBase
 {
