@@ -1,14 +1,20 @@
 ﻿@inherits ImporterCompBase
 
-<MudText>
-    @LoadingMessage
-</MudText>
+<MudWrapperComp>
 
-<MudText>
-    @SampleText
-</MudText>
+    <MudText Color="Color.Success">
+        @LoadingMessage
+    </MudText>
 
+    <MudText>
+        @SampleText
+    </MudText>
 
+    <MudButton Variant="Variant.Filled" Color="Color.Tertiary">
+        Do Something
+    </MudButton>
+
+</MudWrapperComp>
 
 @code {
 
