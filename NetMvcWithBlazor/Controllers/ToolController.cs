@@ -27,6 +27,11 @@ namespace NetMvcWithBlazor.Controllers
             return View(); //must be Index always for blazor
         }
 
+        public IActionResult Tool()
+        {
+            return View("~/Views/Tool/Tool.cshtml");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
