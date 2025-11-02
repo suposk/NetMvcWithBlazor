@@ -22,7 +22,8 @@ namespace NetMvcWithBlazor.Controllers
             IsBlazorEnabled = _configuration.GetValue<bool>("IsBlazorEnabled");
         }
 
-        public IActionResult Importer()
+        //public IActionResult Importer()
+        public IActionResult Index()
         {
             return View("~/Views/BlazorView/Importer.cshtml");
         }
