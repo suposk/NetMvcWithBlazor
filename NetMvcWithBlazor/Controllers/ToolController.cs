@@ -27,9 +27,9 @@ namespace NetMvcWithBlazor.Controllers
             return View(); //must be Index always for blazor
         }
 
-        public IActionResult Tool()
+        public IActionResult NotWorking()
         {
-            return View("~/Views/Tool/Tool.cshtml");
+            return View("~/Views/Tool/NotWorking.cshtml");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
